@@ -9,7 +9,8 @@ import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
-import Detalles from "./pages/Detalles";
+import DetallesPersonajes from "./pages/DetallesPersonajes";
+import DetallesPlanetas from "./pages/detallePlanetas";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -26,7 +27,8 @@ export const router = createBrowserRouter(
         <Route path= "/" element={<Home />} />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
-        <Route path="/detalles/:id" element={<Detalles />}/>
+        <Route path="/detalles/personajes/:id" element={<DetallesPersonajes />}/>
+           <Route path="/detalles/planetas/:uid" element={<DetallesPlanetas />}/>
       </Route>
     )
 );

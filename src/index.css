@@ -1,18 +1,23 @@
-/* LISTA DE PERSONAJES */
 
-.listaPersonaje{
-   display: flex;
-   flex-direction: row;
-   overflow: "auto";
+
+.listaPersonaje {
+    display: flex;
+    flex-direction: row;
+      flex-wrap: nowrap;
+    overflow: auto;
+
    gap:10px;
-   justify-content: center;
+     justify-content: flex-start;
+      overflow-y: hidden;
+
 }
 
-.li{
-list-style: none;
+.li {
+    
+    list-style: none;
 }
 
-.card-list{
+.card-list {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -20,66 +25,311 @@ list-style: none;
     width: 200px;
 }
 
-.card-img{
-    border: 3px solid  rgb(45, 45, 66);
-      border-radius: 0 20px 0 20px;
-width:200px;
-height: 200px;
+.card-img {
+    border: 3px solid rgb(45, 45, 66);
+    border-radius: 0 20px 0 20px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
-.card-body{
+.card-body {
     font-size: 13px;
     color: rgb(149, 158, 158);
     background-color: rgb(45, 45, 66);
     border: 8px solid rgb(16, 16, 24);
     margin: 0;
-   border-radius: 20px 0 20px 0;
+    border-radius: 20px 0 20px 0;
 }
 
-.text{
+.text {
     margin: 0;
 }
-.divBotton{
+
+.divBotton {
     padding-top: 15px;
     display: flex;
     justify-content: space-around;
 }
 
-.fa-regular{
-    color: brown;
+.fa-regular {
+    color: rgb(247, 244, 244);
     font-size: 25px;
 }
 
-.botonDetalles{
-    border: 2px solid rgb(10, 9, 9);
-    border-radius: 10px;
-    background-color: rgb(115, 66, 160);
+.botonDetalles {
+    width: 90px;
+    height: 26px;
 
+    border-radius: 7px;
+    background-color: rgb(100, 34, 161);
+        transition: all 0.01s ease;
+    box-shadow: 0 5px 0 #000;
+
+}
+.botonDetalles:active{
+     transform: translateY(5px);
+    box-shadow: 0 1px 0 #000;
 }
 
 
-/* LISTA DE PLANETAS */
-.listaPlanetas{
+
+.listaPlanetas {
      display: flex;
-   flex-direction: row;
-   overflow: "auto";
+    flex-direction: row;
+      flex-wrap: nowrap;
+    overflow: auto;
+
    gap:10px;
-   justify-content: center;
+     justify-content: flex-start;
+      overflow-y: hidden;
 }
-.liPlanetas{
+
+.liPlanetas {
     list-style: none;
     background-color: rgb(5, 4, 4);
 }
 
-.navbar{
+.navbar {
     background-color: rgb(32, 32, 32);
 }
 
-body{
+body {
     background-color: rgb(5, 4, 4);
 }
 
-.card{
+.card {
     background-color: rgb(5, 4, 4);
+}
+
+.botonCorazon{
+    width: 39px;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgb(60, 73, 128);
+}
+
+.botonCorazon:active{
+      transform: translateY(5px);
+    box-shadow: 0 2px 0 #000;
+}
+
+
+
+.card-detalles {
+    background-color: rgb(147, 149, 151);
+    border: 2px solid blue;
+    border-radius: 7px;
+    margin: 20px;
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+.card-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2px;
+    object-fit: contain;
+}
+
+.card-d {
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+
+.bottonFavoritos{
+   
+    width: 155px;
+   margin-right:40px ;
+  background-color: rgb(100, 34, 161);
+        transition: all 0.01s ease;
+
+}
+
+.botonVolver{
+      width: 100px;
+margin-top: 35px;
+  border-radius: 7px;
+    background-color: rgb(100, 34, 161);
+        transition: all 0.01s ease;
+    box-shadow: 0 5px 0 #000;
+}
+
+.divBotonVolver{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+
+
+.liFavoritos{
+    
+    display: flex;
+width: 130px;
+    justify-content: space-between;
+}
+
+
+.card-d .link-detalle {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-d .card-detallesP {
+    background-color: rgb(147, 149, 151);
+    border: 2px solid blue;
+    border-radius: 7px;
+    margin: 20px;
+    width: 900px;
+    min-height: 280px;
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    padding: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-d .imagen {
+    width: 260px;
+    min-width: 260px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-d .imagenPlaneta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+.card-d .card-detallesP .card-body-d {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+.card-d .card-detallesP .card-title {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(19, 19, 19);
+}
+
+.card-d .card-detallesP .card-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 6px 0;
+    line-height: 1.4;
+    color: rgb(19, 19, 19);
+    word-break: break-word;
+}
+
+.card-d .card-detallesP .text-muted {
+    color: rgb(73, 73, 73) !important;
+}
+
+.card-d .card-detallesP:hover {
+    transform: scale(1.01);
+    transition: 0.2s ease;
+}
+
+
+.card-d {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-d .card-detalles {
+    background-color: rgb(147, 149, 151);
+    border: 2px solid blue;
+    border-radius: 7px;
+    margin: 20px;
+    width: 900px;
+    min-height: 430px;
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.card-d .imagenPersonaje {
+    width: 260px;
+    min-width: 260px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-d .imagenPersonaje img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 8px;
+    
+}
+
+.card-d .card-body-d {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+.card-d .card-title {
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(19, 19, 19);
+}
+
+.card-d .card-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 6px 0;
+    line-height: 1.4;
+    color: rgb(19, 19, 19);
+    word-break: break-word;
+}
+
+.card-d .text-muted {
+    color: rgb(73, 73, 73) !important;
+}
+
+
+.link-detalle {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
