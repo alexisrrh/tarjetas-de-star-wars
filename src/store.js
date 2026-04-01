@@ -25,11 +25,22 @@ export default function storeReducer(store, action = {}) {
        planetas: action.payload
       };
 
- case 'set_favoritos':
+ case 'set_favoritos': 
+  const existe = store.favoritos.find(
+        (item) => item.name === action.payload.name
+      );
+
+      if (existe) {
+        return store;
+      }
+
       return {
         ...store,
-       favoritos: [...store.favoritos, action.payload]
+        favoritos: [...store.favoritos, action.payload]
       };
+
+  
+
  case 'delete_favorito':
       return {
         ...store,
@@ -38,5 +49,6 @@ export default function storeReducer(store, action = {}) {
 
     default:
       throw Error('Unknown action.');
+    }
   }    
-}
+

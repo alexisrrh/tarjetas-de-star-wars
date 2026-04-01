@@ -95,7 +95,9 @@
 }
 
 body {
-    background-color: rgb(5, 4, 4);
+background-color: #030002;
+background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
 }
 
 .card {

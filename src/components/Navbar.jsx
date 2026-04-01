@@ -7,7 +7,7 @@ const {store, dispatch}=useGlobalReducer()
 		<nav className="navbar navbar-light">
 			<div className="container-fluid">
 				<Link to="/">
-					<img src={logo} style={{ width: "120px" }} alt="logo" />
+					<img src={logo} style={{ width: "140px" }} alt="logo" />
 				</Link>
 				<div className="dropdown">
 					<button className="bottonFavoritos btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
