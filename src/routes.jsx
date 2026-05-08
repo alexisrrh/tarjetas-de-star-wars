@@ -11,7 +11,8 @@ import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
 import DetallesPersonajes from "./pages/DetallesPersonajes";
 import DetallesPlanetas from "./pages/detallePlanetas";
-
+import Login from "./pages/Login";
+import Registro from "./pages/Registro";
 export const router = createBrowserRouter(
     createRoutesFromElements(
     // CreateRoutesFromElements function allows you to build route elements declaratively.
@@ -29,6 +30,8 @@ export const router = createBrowserRouter(
         <Route path="/demo" element={<Demo />} />
         <Route path="/detalles/personajes/:id" element={<DetallesPersonajes />}/>
            <Route path="/detalles/planetas/:uid" element={<DetallesPlanetas />}/>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/registro" element={<Registro />}/>
       </Route>
     )
 );

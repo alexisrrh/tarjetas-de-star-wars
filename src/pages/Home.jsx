@@ -3,6 +3,7 @@ import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import CardCharacter from "../components/CardCharacter.jsx";
 import CardPlanetas from "../components/CardPlanetas.jsx";
 import React, { useEffect} from "react";
+import {Private} from "../services/auth.services.js";
 
 export const Home = () => {
 	
@@ -44,7 +45,7 @@ export const Home = () => {
 
 	useEffect(() => {
 		informacion()
-	
+	Private()
 	}, [])
 
 
