@@ -1,7 +1,7 @@
 import useGlobalReducer from "../hooks/useGlobalReducer";
 import { useState } from "react";
 import { login } from "../services/auth.services";
-import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
+import {useNavigate } from "react-router-dom";
 export default function Login() {
     const { store, dispatch } = useGlobalReducer();
     const [email, setEmail] = useState("");

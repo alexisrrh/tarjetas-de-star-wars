@@ -1,7 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
+
 import logo from "../assets/img/logo.png"
 import useGlobalReducer from "../hooks/useGlobalReducer";
-import	{usenavigate} from "react-router-dom/dist/umd/react-router-dom.development";
+import { Link ,useNavigate } from "react-router-dom";
+
 
 
 export const Navbar = () => {
@@ -9,14 +10,15 @@ const {store, dispatch}=useGlobalReducer()
 	const navigate = useNavigate();
 	 const user = localStorage.getItem("user");
 	return (
-		<nav className="navbar navbar-light">
+		<nav className="navbar navbar-dark bg-dark px-4">
 			<div className="container-fluid">
 				<Link to="/">
 					<img src={logo} style={{ width: "140px" }} alt="logo" />
 				</Link>
+			<div
+    className="d-flex align-items-center gap-1"
+>
 				<div className="dropdown">
-					
-					
 
 					<button className="bottonFavoritos btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
 						Favoritos: ({store.favoritos.length})
@@ -28,7 +30,7 @@ const {store, dispatch}=useGlobalReducer()
 						<li className="liFavoritos" key={index}>{item.name} <i className="fa-regular fa-trash-can" onClick={()=> dispatch({type:'delete_favorito', payload: index})}></i> </li>
 					))}
 
-					</ul>
+					</ul> </div>	
 					 {user ? (
 
                     <div
@@ -55,7 +57,18 @@ const {store, dispatch}=useGlobalReducer()
                             {user.slice(0,4).toUpperCase()}
                         </div>
 
-                        <span>{user}</span>
+                       
+
+                        <button
+                            className="btn btn-danger"
+                            onClick={() => {
+                                localStorage.removeItem("token");
+                                localStorage.removeItem("user");
+                                navigate("/login");
+                            }}
+                        >
+                            Cerrar sesión
+                        </button>
 					</div>
 
                 ) : (

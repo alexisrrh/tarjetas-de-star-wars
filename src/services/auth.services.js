@@ -40,7 +40,7 @@ export async function crearUsuario(nombre, apellido, email, password) {
     };
 
     try {
-        const response = await fetch('https://psychic-space-garbanzo-wrpjgrxr6xvqf94pw-3000.app.github.dev/signup', requestOptions);
+        const response = await fetch("https://psychic-space-garbanzo-wrpjgrxr6xvqf94pw-3000.app.github.dev/signup", requestOptions);
         const data = await response.json();
         if (response.ok) {
             return data;
@@ -75,3 +75,4 @@ export async function Private() {
         return null;
     }
 }
+
